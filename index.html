@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:400,800" rel="stylesheet">
+</head>
+
+<body>
+    <img src="assets/title.png" alt="" height="200px" class="app-image">
+    <h1 class="app-title">Drink API</h1>
+    <p class="app-desc">This is an API that will help you to find recipes for drinks.<br>
+        Enter the ingredient in the field.<br>
+        On its basis I will search for recipes containing the ingredient you are interested in.<br>
+        For example, enter "gin" in the search engine</p>
+    <div class="search-panel">
+        <input type="text" class="search-drink" placeholder="Example: gin">
+        <button class="search-button">Search</button>
+    </div>
+    <p class="error">Enter a valid ingredient name</p>
+    <div class="list-of-drinks">
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sniglet', cursive;
+    background: #F2994A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+.app-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.app-title {
+    text-align: center;
+    font-size: 56px;
+    text-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.app-desc {
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.search-panel {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.search-drink {
+    padding: 10px 40px;
+    margin-right: 10px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.search-drink:focus {
+    transition: 0.5s;
+    transform: scale(1.1, 1.1);
+}
+
+.search-button {
+    font-size: 20px;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    background-color: #F5F5F5;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #FAE11E;
+    transition: .5s;
+}
+
+.drink {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 20px;
+}
+
+.drink-title {
+    font-size: 70px;
+}
+
+.drink-instruction {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+}
+
+.drink-type {
+    margin-bottom: 3%;
+}
+
+.drink-image {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: -7px 20px 63px -12px rgba(0, 0, 0, 0.75);
+}
+
+.drink-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.col-right {
+    width: 20%;
+}
+
+.col-left {
+    margin-right: 2%;
+}
+
+.drink-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    font-size: 18px;
+}
+
+.ingredients {
+    padding-right: 10px;
+}
+
+.ingredient {
+    padding: 2px;
+    border-bottom: 1px solid orange;
+}
+
+.measures {
+    padding-left: 10px;
+}
+
+.measure {
+    padding: 2px;
+    border-bottom: 1px solid orange;
+}
+
+.error {
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+    color: red;
+    font-size: 26px;
+}
