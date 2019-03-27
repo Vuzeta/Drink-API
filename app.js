@@ -153,6 +153,15 @@ const getDrinksFromArray = arrWithDrinks => {
     });
 };
 
+Elements.inputSearch.addEventListener('keypress', function (e) {
+    if (e.keyCode == 13) {
+        Elements.errorPrint.style.display = 'none';
+        Elements.drinkList.textContent = '';
+        getDrinksArray(Elements.inputSearch.value);
+        this.blur();
+    }
+});
+
 Elements.buttonSearch.addEventListener('click', function () {
     if (!Elements.inputSearch.value) {
         Elements.errorPrint.style.display = 'block';
