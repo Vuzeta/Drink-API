@@ -1,7 +1,9 @@
 body {
     font-family: 'Lato', sans-serif;
-    background: #F2994A;
-    background: linear-gradient(to right, #F2C94C, #F2994A);
+    /* background: #F2994A;
+    background: linear-gradient(to right, #F2C94C, #F2994A); */
+    background: url(assets/background-test.jpg) no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -19,9 +21,13 @@ ul {
     font-style: italic;
 }
 
-.app-image {
+/* .app-image {
     display: block;
     margin: 0 auto;
+} */
+
+.container {
+    margin-top: 50px;
 }
 
 .app-title {
@@ -55,13 +61,13 @@ ul {
     font-weight: bold;
     text-align: center;
     transition: 0.5s;
-    border: 1px solid #F5F5F5;
+    border: 2px solid #F5F5F5;
 }
 
 .search-drink:focus {
     transition: 0.5s;
     transform: scale(1.1, 1.1);
-    border: 1px solid black;
+    border: 2px solid #FAE11E;
 }
 
 .search-button {
@@ -82,13 +88,19 @@ ul {
 .search-button:hover {
     background-color: #FAE11E;
     transition: .5s;
-    border: 1px solid black;
+    border: 1px solid #F5F5F5;
+}
+
+.list-of-drinks {
+    margin-top: 40px;
 }
 
 .drink {
     text-align: center;
     border-bottom: 2px solid black;
     padding: 20px;
+    background-color: rgba(245, 245, 245, 0.6);
+    border-radius: 12px;
 }
 
 .drink-title {
@@ -100,6 +112,10 @@ ul {
 .span-title {
     color: red;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.drink-span-type {
+    font-weight: bold;
 }
 
 .drink-instruction {
@@ -149,6 +165,9 @@ ul {
     padding: 2px;
     flex-direction: column;
     margin: 10px;
+    color: red;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .measures {
@@ -157,4 +176,6 @@ ul {
 
 .measure {
     margin: 15px 0px 15px;
+    color: black;
+    text-shadow: none;
 }

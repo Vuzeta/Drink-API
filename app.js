@@ -113,7 +113,10 @@ class Drink {
     };
     makeIngredientIcon(ingredient, parent) {
         const img = document.createElement('img')
-        img.setAttribute('src', `assets/icons/${ingredient}-Medium.png`);
+        // let replaceWthiteSpace = ingredient.split(/[ ,]+/).join('%');
+        // img.setAttribute('src', `assets/icons/${ingredient}-Medium.png`);
+        let replaceWthiteSpace = ingredient.split(/[ ]+/).join('%20');
+        img.setAttribute('src', `https://www.thecocktaildb.com/images/ingredients/${replaceWthiteSpace}-Medium.png`);
         img.setAttribute('width', `150px`);
         parent.appendChild(img);
     };
