@@ -36,7 +36,7 @@ class Drink {
         const spanTitle = document.createElement('span');
         spanTitle.classList.add('span-title');
 
-        spanTitle.textContent = `${++Elements.counter}.`;
+        spanTitle.textContent = `${++Elements.counter}. `;
         drinkTitle.textContent = this.name;
 
         const drinkWrapper = document.createElement('div');
@@ -64,7 +64,7 @@ class Drink {
         drinkSpanType.textContent = this.type;
 
         if (drinkSpanType.textContent == 'Non alcoholic') drinkSpanType.style.color = 'green'
-        else drinkSpanType.style.color = 'red';
+        else drinkSpanType.style.color = '#cc0000';
 
         const drinkDesc = document.createElement('p');
         drinkDesc.classList.add('drink-desc');
