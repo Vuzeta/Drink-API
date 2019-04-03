@@ -1,4 +1,5 @@
 const Elements = {
+    counterElements: 0,
     inputSearch: document.querySelector('.search-drink'),
     buttonSearch: document.querySelector('.search-button'),
     drinkList: document.querySelector('.list-of-drinks'),
@@ -24,12 +25,18 @@ class Drink {
         return cleanArray;
     }
     printDrink() {
+        const self = this;
 
         const drinkDiv = document.createElement('div')
         drinkDiv.classList.add('drink');
 
         const drinkTitle = document.createElement('h1');
         drinkTitle.classList.add('drink-title');
+
+        const spanTitle = document.createElement('span');
+        spanTitle.classList.add('span-title');
+
+        spanTitle.textContent = `${++Elements.counter}.`;
         drinkTitle.textContent = this.name;
 
         const drinkWrapper = document.createElement('div');
@@ -69,28 +76,29 @@ class Drink {
         const drinkIngredients = document.createElement('ul');
         drinkIngredients.classList.add('ingredients');
 
-        const cleanArrIngredients = this.cleanArrFromSpace(this.ingredients);
-
-        cleanArrIngredients.forEach(el => {
-            const li = document.createElement('li');
-            li.classList.add('ingredient');
-            li.textContent = el;
-            drinkIngredients.appendChild(li);
+        let cleanArrIngredients = this.cleanArrFromSpace(this.ingredients);
+        cleanArrIngredients = cleanArrIngredients.filter(function (item, pos) {
+            return cleanArrIngredients.indexOf(item) == pos;
         });
-
-        const drinkMeasures = document.createElement('ul');
-        drinkMeasures.classList.add('measures');
 
         const cleanArrMeasures = this.cleanArrFromSpace(this.measures);
 
-        cleanArrMeasures.forEach(el => {
+        cleanArrIngredients.forEach((el, index) => {
             const li = document.createElement('li');
-            li.classList.add('measure');
-            li.textContent = el;
-            drinkMeasures.appendChild(li);
-        });
+            const measure = document.createElement('p');
 
+            li.classList.add('ingredient');
+            li.textContent = el;
+            drinkIngredients.appendChild(li);
+
+            measure.classList.add('measure');
+            measure.innerHTML = `${cleanArrMeasures[index] != undefined? cleanArrMeasures[index] : "&nbsp;"}`
+            li.appendChild(measure);
+            self.makeIngredientIcon(el, li);
+
+        });
         Elements.drinkList.appendChild(drinkDiv);
+        drinkTitle.prepend(spanTitle);
         drinkDiv.appendChild(drinkTitle);
         drinkDiv.appendChild(drinkWrapper);
         drinkWrapper.appendChild(drinkColLeft);
@@ -102,7 +110,15 @@ class Drink {
         divInstruction.appendChild(drinkDesc);
         drinkColRight.appendChild(drinkDetails);
         drinkDetails.appendChild(drinkIngredients);
-        drinkDetails.appendChild(drinkMeasures);
+    };
+    makeIngredientIcon(ingredient, parent) {
+        const img = document.createElement('img')
+        // let replaceWthiteSpace = ingredient.split(/[ ,]+/).join('%');
+        // img.setAttribute('src', `assets/icons/${ingredient}-Medium.png`);
+        let replaceWthiteSpace = ingredient.split(/[ ]+/).join('%20');
+        img.setAttribute('src', `https://www.thecocktaildb.com/images/ingredients/${replaceWthiteSpace}-Medium.png`);
+        img.setAttribute('width', `150px`);
+        parent.appendChild(img);
     };
 };
 
@@ -117,6 +133,7 @@ const getDrinksArray = (valueFromSearchField) => {
         })
         .then(posts => {
             const arrWithDrinks = [];
+            Elements.counter = 0;
             posts.drinks.forEach(drink => {
                 arrWithDrinks.push(drink.strDrink);
             });
