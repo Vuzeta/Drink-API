@@ -25,7 +25,6 @@
     document.addEventListener("scroll", function () {
         console.log(document.documentElement.scrollTop)
         if (document.documentElement.scrollTop > 900) {
-
             button.classList.remove("hidden");
         } else {
             button.classList.add("hidden");
