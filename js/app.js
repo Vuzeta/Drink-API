@@ -36,7 +36,7 @@ class Drink {
         const spanTitle = document.createElement('span');
         spanTitle.classList.add('span-title');
 
-        spanTitle.textContent = `${++Elements.counter}.`;
+        spanTitle.textContent = `${++Elements.counter}. `;
         drinkTitle.textContent = this.name;
 
         const drinkWrapper = document.createElement('div');
@@ -64,7 +64,7 @@ class Drink {
         drinkSpanType.textContent = this.type;
 
         if (drinkSpanType.textContent == 'Non alcoholic') drinkSpanType.style.color = 'green'
-        else drinkSpanType.style.color = 'red';
+        else drinkSpanType.style.color = '#cc0000';
 
         const drinkDesc = document.createElement('p');
         drinkDesc.classList.add('drink-desc');
@@ -113,8 +113,6 @@ class Drink {
     };
     makeIngredientIcon(ingredient, parent) {
         const img = document.createElement('img')
-        // let replaceWthiteSpace = ingredient.split(/[ ,]+/).join('%');
-        // img.setAttribute('src', `assets/icons/${ingredient}-Medium.png`);
         let replaceWthiteSpace = ingredient.split(/[ ]+/).join('%20');
         img.setAttribute('src', `https://www.thecocktaildb.com/images/ingredients/${replaceWthiteSpace}-Medium.png`);
         img.setAttribute('width', `150px`);

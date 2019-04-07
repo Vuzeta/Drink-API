@@ -1,11 +1,10 @@
 body {
     font-family: 'Lato', sans-serif;
-    /* background: #F2994A;
-    background: linear-gradient(to right, #F2C94C, #F2994A); */
-    background: url(assets/background-test.jpg) no-repeat center center fixed;
+    background: url(assets/background2.jpg) no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
+    font-family: 'Signika', sans-serif;
 }
 
 ul {
@@ -19,12 +18,9 @@ ul {
     color: red;
     font-size: 24px;
     font-style: italic;
+    background-color: #f5f5f5;
+    padding: 15px;
 }
-
-/* .app-image {
-    display: block;
-    margin: 0 auto;
-} */
 
 .container {
     margin-top: 50px;
@@ -34,13 +30,49 @@ ul {
     text-align: center;
     font-size: 56px;
     text-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
+    font-family: 'Kalam', cursive;
+    color: rgb(255, 170, 0);
+    font-weight: bold;
 }
 
 .app-desc {
     margin: 15px 0px;
     text-align: center;
-    font-size: 20px;
+    font-size: 26px;
     text-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.back {
+    display: block;
+    z-index: 9999;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-image: url(assets/arrow.png);
+    border-radius: 12px;
+    outline: none;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    transition: .8s;
+    transform: rotate(-90deg);
+}
+
+.back:hover {
+    transform: translateY(-5px);
+    transform: rotate(270deg);
+    transition: .8s;
+}
+
+.hidden {
+    display: none;
 }
 
 .search-panel {
@@ -62,12 +94,13 @@ ul {
     text-align: center;
     transition: 0.5s;
     border: 2px solid #F5F5F5;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .search-drink:focus {
     transition: 0.5s;
     transform: scale(1.1, 1.1);
-    border: 2px solid #FAE11E;
+    border: 2px solid rgb(255, 170, 0);
 }
 
 .search-button {
@@ -83,12 +116,13 @@ ul {
     transition: .5s;
     cursor: pointer;
     border: 1px solid #F5F5F5;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .search-button:hover {
-    background-color: #FAE11E;
+    background-color: rgb(255, 170, 0);
     transition: .5s;
-    border: 1px solid #F5F5F5;
+    border: 1px solid rgb(255, 170, 0);
 }
 
 .list-of-drinks {
@@ -97,20 +131,20 @@ ul {
 
 .drink {
     text-align: center;
-    border-bottom: 2px solid black;
     padding: 20px;
-    background-color: rgba(245, 245, 245, 0.6);
-    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 8px auto;
 }
 
 .drink-title {
     font-size: 70px;
     font-weight: bold;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    font-family: 'Kalam', cursive;
 }
 
 .span-title {
-    color: red;
+    color: #FF3800;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -119,8 +153,7 @@ ul {
 }
 
 .drink-instruction {
-    font-size: 18px;
-    letter-spacing: 0.05em;
+    font-size: 20px;
 }
 
 .drink-type {
@@ -154,6 +187,10 @@ ul {
     font-size: 18px;
 }
 
+.drink-desc {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .ingredients {
     padding-right: 10px;
     display: flex;
@@ -165,9 +202,10 @@ ul {
     padding: 2px;
     flex-direction: column;
     margin: 10px;
-    color: red;
+    /* color: #318BA3; */
+    color: #000;
     font-weight: bold;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .measures {
