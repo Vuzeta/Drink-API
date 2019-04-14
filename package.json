@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --content-base src/ --env.development",
     "clean": "rimraf dist",
-    "dev": "webpack --mode development",
+    "dev": "webpack --mode development --env.development",
     "prod": "webpack -p --env.production"
   },
   "repository": {

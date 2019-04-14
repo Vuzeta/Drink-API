@@ -10,7 +10,7 @@ export function goUp() {
 
     function animateButton() {
         if (document.documentElement.scrollTop > 0) {
-            window.scrollBy(0, -80);
+            window.scrollBy(0, -500);
             setTimeout(animateButton, 1);
         }
     }
