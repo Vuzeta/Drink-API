@@ -1,4 +1,4 @@
-(function () {
+export function goUp() {
 
     function createButton() {
         const button = document.createElement("button");
@@ -23,12 +23,10 @@
     }, false);
 
     document.addEventListener("scroll", function () {
-        console.log(document.documentElement.scrollTop)
         if (document.documentElement.scrollTop > 900) {
             button.classList.remove("hidden");
         } else {
             button.classList.add("hidden");
         }
     }, false)
-
-})();
+};

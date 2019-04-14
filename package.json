@@ -1,0 +1,40 @@
+{
+  "name": "Drink-API",
+  "version": "1.0.0",
+  "description": "Still working",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base src/ --env.development",
+    "clean": "rimraf dist",
+    "dev": "webpack --mode development",
+    "prod": "webpack -p --env.production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vuzeta/Drink-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vuzeta/Drink-API/issues"
+  },
+  "homepage": "https://github.com/Vuzeta/Drink-API#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
