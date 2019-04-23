@@ -290,4 +290,11 @@ ul {
         width: 400px;
         text-align-last: center;
     }
+
+    @media only screen and (max-width : 300px) {
+        .ingredient {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
 }
