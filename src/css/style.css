@@ -11,7 +11,7 @@ ul {
     list-style: none;
 }
 
-.error {
+.error-handler {
     margin-top: 20px;
     display: none;
     text-align: center;
@@ -85,7 +85,7 @@ ul {
 .search-drink {
     background-color: #F5F5F5;
     padding: 10px 40px;
-    margin-right: 10px;
+    margin-right: 25px;
     border-radius: 12px;
     outline: none;
     border: none;
@@ -101,6 +101,21 @@ ul {
     transition: 0.5s;
     transform: scale(1.1, 1.1);
     border: 2px solid rgb(255, 170, 0);
+}
+
+.select-search-engine,
+.select-search-engine * {
+    border-radius: 12px;
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+    border: 2px solid #F5F5F5;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
 }
 
 .search-button {
@@ -189,6 +204,10 @@ ul {
 
 .drink-desc {
     font-family: 'Montserrat', sans-serif;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 12px;
+    padding: 2%;
+    background-size: 100% 100%;
 }
 
 .ingredients {
@@ -202,7 +221,6 @@ ul {
     padding: 2px;
     flex-direction: column;
     margin: 10px;
-    /* color: #318BA3; */
     color: #000;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -216,4 +234,60 @@ ul {
     margin: 15px 0px 15px;
     color: black;
     text-shadow: none;
+}
+
+@media only screen and (max-width : 1250px) {
+    .drink-title {
+        font-size: 60px;
+    }
+
+    .drink-type {
+        margin-top: 3%;
+    }
+
+    .drink-wrapper {
+        display: block;
+    }
+
+    .col-right {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width : 800px) {
+
+    .app-desc {
+        margin: 15px 0px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, .5);
+        padding: 5px 0px;
+    }
+
+    .drink-title {
+        font-size: 50px;
+    }
+
+    .search-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .search-drink,
+    .select-search-engine,
+    .search-button {
+        width: 50%;
+        margin: 2% auto;
+    }
+
+    select,
+    option {
+        width: 400px;
+        text-align-last: center;
+    }
 }

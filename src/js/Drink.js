@@ -32,7 +32,7 @@ export class Drink {
         const spanTitle = document.createElement('span');
         spanTitle.classList.add('span-title');
 
-        spanTitle.textContent = `${++Elements.counter}. `;
+        spanTitle.textContent = `${++Elements.counterElements}. `;
         drinkTitle.textContent = this.name;
 
         const drinkWrapper = document.createElement('div');
